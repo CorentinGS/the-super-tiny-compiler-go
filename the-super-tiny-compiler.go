@@ -16,7 +16,7 @@ func Tokenizer(input string) []Token {
 	input += "\n"
 
 	current := 0
-	tokens := []Token{}
+	var tokens []Token
 
 	for current < len([]rune(input)) {
 		c := string([]rune(input)[current])
@@ -76,7 +76,6 @@ func Tokenizer(input string) []Token {
 
 			continue
 		}
-		//TODO: Might add an error here
 		break
 	}
 
